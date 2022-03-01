@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+	<title>Contact Information</title>
+	<meta charset = "utf-8">
+
+</head>
+<body>
+
+<header>
+	<h1>Contact Information</h1>
+</header>
+
+<form name="myForm" id="form">
+  <label for="email" id = "email1">Email:</label><br>
+  <input type="text" id="email" name="email"><br>
+
+  <label for="phone" id="phone1">Phone:</label><br>
+  <input type="phone" id="phone" name="phone"><br>
+
+  <label for="address" id = "address1">Address:</label><br>
+  <input type="address" id="address" name="address"><br><br>
+
+  <input onClick="validateForm2()" type="button" id="continue" value="Continue"/>
+
+</form>
+
+
+
+<script defer src = "./validation2.js"></script>
+</body>
+</html>

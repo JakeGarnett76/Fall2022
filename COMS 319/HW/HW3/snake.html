@@ -1,0 +1,143 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1><p id="header">COUNTDOWN IN SECONDS</p>
+        <p id="here"></p>
+        </h1>
+    <input id="btn" type="button"  value="Start" /><br>
+    <input id="btnR" type="button" onclick="rightClick()" value="Right" /><br>
+    <input id="btnL" type="button" onclick="leftClick()" value="Left" /><br>
+    <canvas id="canvasId" width="500" height="500" style="border:1px solid #000000;"></canvas>
+   
+    <script type="text/javascript">
+        
+    //timer
+    var i=100;
+    var timer =setInterval(function(){
+        document.getElementById("here").innerHTML=i--;
+    },1000);
+    
+    //1:north 2:east 3:south 4:west
+    var direction = 2;
+    var myBtn = document.getElementById("btn");
+    var myBtnL = document.getElementById("btnL");
+    var myBtnR = document.getElementById("btnR");
+
+    var fromX = parseInt(10);
+    var fromY = parseInt(10);
+
+    var toX = parseInt(10);
+    var toY = parseInt(10);
+
+    window.onload = myClick;
+    function myClick(){
+        myBtn.onclick = start;
+    }
+    //1:north 2:east 3:south 4:west
+    function leftClick(){
+        if(direction == 1){
+            direction = 4
+            console.log("n w");
+        }
+        else if(direction == 2){
+            direction = 1;
+            console.log("e n");
+        }
+        else if(direction == 3){
+            direction = 2;
+            console.log("s w");
+        }
+        else if(direction == 4){
+            direction = 3;
+            console.log("w s");
+        }
+    }
+    //1:north 2:east 3:south 4:west
+    function rightClick(){
+        if(direction == 1){
+            direction = 2;
+            console.log("n e");
+        }
+        else if(direction == 2){
+            direction = 3;
+            console.log("e s");
+        }
+        else if(direction == 3){
+            direction = 4;
+            console.log("s w");
+        }
+        else if(direction == 4){
+            direction = 1;
+            console.log("w n");
+        }
+    }
+
+    function start() {
+        setInterval(function(){
+
+            myBtn.value = "Stop";
+            console.log(direction);
+            //north
+            if(direction == 1){
+                toY = toY - 1;
+                console.log("north");
+            }
+            //east
+            if(direction == 2){
+                toX = toX + 1;
+                console.log("east");
+            }
+            //south
+            if(direction == 3){
+                toY = toY + 1;
+                console.log("south");
+            }
+            //west
+            if(direction == 4){
+                toX = toX - 1
+                console.log("west");
+            }
+
+            var context = document.getElementById("canvasId").getContext("2d");
+            context.moveTo(fromX, fromY);
+            context.lineTo(toX,toY);
+            context.stroke();
+
+            //north
+            if(direction == 1){
+                fromY -=1;
+            }
+            //east
+            if(direction == 2){
+                fromX +=1;
+            }
+            //south
+            if(direction == 3){
+                fromY +=1;
+            }
+            //west
+            if(direction == 4){
+                fromX -=1;
+            }
+
+
+
+        }, 30);
+    }
+/**
+    myBtn.onclick =setInterval(function(){
+            myBtn.value = "Stop";
+            myBtnL.onclick = direction--;
+            myBtnR.onclick = direction++;
+
+            var context = document.getElementById("canvasId").getContext("2d");
+            context.moveTo(parseInt(fromX), parseInt(fromY));
+            context.lineTo(parseInt(toX),parseInt(toY));
+            context.stroke();
+        }
+**/
+     //look at other canvas methods!
+    </script>
+  </body>
+</html>

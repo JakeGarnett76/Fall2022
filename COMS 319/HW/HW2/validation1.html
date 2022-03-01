@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+	<title>Validation Form</title>
+	<meta charset = "utf-8">
+
+</head>
+<body>
+
+<header>
+	<h1>Validation Form</h1>
+</header>
+
+<form name="myForm" id="form">
+  <label for="firstName" id="firstName1">First name:</label><br>
+  <input type="text" id="firstName" name="firstName"><br>
+
+  <label for="lastName" id="lastName1">Last name:</label><br>
+  <input type="text" id="lastName" name="lastName"><br>
+
+  <label for="gender" id = "gender1">Gender:</label><br>
+  <select id="gender" name="gender">
+  	<option value =""></option>
+  	<option value ="Male">Male</option>
+  	<option value ="Male">Female</option>
+  </select><br>
+
+
+  <label for="state" id = "state1">State:</label><br>
+    <select id="state" name="state">
+    <option value =""></option>
+  	<option value ="California">California</option>
+  	<option value ="Flordia">Flordia</option>
+  	<option value ="New York">New York</option>
+  	<option value ="Texas">Texas</option>
+  	<option value ="Hawaii">Hawaii</option>
+  	<option value ="Washington">Washington</option>
+  	<option value ="Colorado">Colorado</option>
+  	<option value ="Virginia">Virgina</option>
+  	<option value ="Iowa">Iowa</option>
+  	<option value ="Arizona">Arizona</option>
+  </select>
+  
+  <br><br>
+
+  <input onClick="validateForm()" type="button" id="continue" value="Continue"/>
+
+</form>
+
+
+
+<script defer src = "./validation1.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+1/30 - Added map display
+1/31 - Added exits
+2/1 - Added exits and road generation
+2/2 - Added tall grass generation and pokemart

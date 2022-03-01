@@ -1,0 +1,12 @@
+validate1
+
+I used the submit button to check if the forms were filled in properly. 
+THe first and last name needs to have letters or numbers
+Gender needs to not be blank
+State needs to not be blank
+
+validate2
+I used the submit button to check the the forms are filled in properly
+The email needs to contain an @
+phone number needs to contain no dashes or 2 dashes
+The address needs to contain a comma

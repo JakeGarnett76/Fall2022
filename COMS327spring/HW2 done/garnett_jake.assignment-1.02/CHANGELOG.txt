@@ -1,0 +1,6 @@
+Febuary 7: created 2d array and filled with Null pointers.
+added struct to HW1.c and modified to work with struct.
+
+Febuary 8: Added movement. Made roads match up. Added spawn chance to buildings.
+
+Febuary 9: Tried to fix error where the program randomly stops working. Added fly feature.
